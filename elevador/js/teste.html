@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="button" value="0">
+<script>
+    var input = document.querySelector("#button")
+    var texto = parseInt(input.value)
+    console.log(typeof(texto));
+    /*function mudarNome()
+    {
+     if(document.getElementById("button").value == "Ativo")
+     {
+      document.getElementById("button").value = "Inativo";
+     } 
+     else
+     {
+      document.getElementById("button").value = "Ativo";
+     }
+    }*/
+    </script>
+    
+    entrar_sair(op,texto,v) {
+        if (this.verifica == "Abrir")
+            this.verificaPorta(this.verifica)
+        else {
+            if ((v + this.totalPessoas) <= this.capacidade) {
+                this.inserir(this.totalPessoas+1,'entrar')
+                if (op == '+')
+                    this.totalPessoas += v
+                else
+                    this.totalPessoas -= v
+                
+                    this.qtdPessoa.value = this.totalPessoas                
+            } else {
+                this.andar.value = texto
+                setTimeout(()=> {                    
+                    document.querySelector('.bt').click()
+
+                    this.andar.value = this.andarAtual
+                },3000)
+            }
+        }
+    }
+    
+    entrar(v) {
+        this.entrar_sair('+','Alcançada a capacidade limite',v)        
+    }
+
+    sair(v) {
+        this.entrar_sair('-','Não Existem pessoas nesse andar',v)        
+    }
+    </body>
+</html>

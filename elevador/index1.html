@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/style1.css">        
+        <title>Elevador</title>
+    </head>
+    <body>
+        <button class="inic" onclick="iniciar()" value="Inicializar"><img src="images/0.png"></button>
+        <button class="subir" onclick="iniciarElevador.subir(1)"><img src="images/1.png"></button>
+        <button class="descer" onclick="iniciarElevador.descer(1)"><img src="images/2.png"></button>
+        <button class="entrar" onclick="iniciarElevador.entrar(1)" value="Entrar"><img src="images/3.png"></button>
+        <button class="sair" onclick="iniciarElevador.sair(1)" value="Sair"><img src="images/4.png"></button>
+        
+        <div class="fund">
+            <div class="espElev">
+                <div class="pes"></div>
+                <div class="pE">
+                    <button class="bt" onclick="iniciarElevador.abrirPorta()" value="Abrir"></button>
+                </div>
+                <div class="pD">                    
+                    <input type="button" class="andar" value="0">
+                    <input type="button" class="letreiro" value="Térreo">
+                    <input type="button" class="cap" value="Nº de Pessoas">
+                    <input type="button" class="qtdPes" value="0">
+                </div>
+            </div>
+        </div>
+               
+        
+        <script src="js/script1.js"></script>
+        <script>preparaAndar()</script>
+    </body>
+</html>
